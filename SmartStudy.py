@@ -67,8 +67,8 @@ if __name__ == "__main__":
         text_from_pdf = load_data(uploaded_file)
 
         # 質問生成と回答生成のためのテキストデータの分割
-        documents_for_question_gen = split_text(text_from_pdf, chunk_size=500, chunk_overlap=100)
-        documents_for_question_answering = split_text(text_from_pdf, chunk_size=300, chunk_overlap=100)
+        documents_for_question_gen = split_text(text_from_pdf, chunk_size=1000, chunk_overlap=100)
+        documents_for_question_answering = split_text(text_from_pdf, chunk_size=500, chunk_overlap=100)
 
         # Large Language Models (LLM) を初期化
         llm_question_gen = initialize_llm(openai_api_key=openai_api_key, model="gpt-3.5-turbo-16k", temperature=0.4)

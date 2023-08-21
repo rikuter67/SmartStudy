@@ -12,7 +12,7 @@ prompt_template_questions = """
 学生の試験準備となる質問を作成します。
 重要な情報を失わないようにしてください。
 
-QUESTIONS: 
+質問: 
 """
 PROMPT_QUESTIONS = PromptTemplate(template=prompt_template_questions, input_variables=["text"])
 
