@@ -71,7 +71,7 @@ if __name__ == "__main__":
         documents_for_question_answering = split_text(text_from_pdf, chunk_size=500, chunk_overlap=100)
 
         # Large Language Models (LLM) を初期化
-        llm_question_gen = initialize_llm(openai_api_key=openai_api_key, model="gpt-3.5-turbo-16k", temperature=0.4)
+        llm_question_gen = initialize_llm(openai_api_key=openai_api_key, model="gpt-3.5-turbo-16k", temperature=0.8)
         llm_question_answering = initialize_llm(openai_api_key=openai_api_key, model="gpt-3.5-turbo", temperature=0.1)
 
         # `questions`がst.session_stateに存在しない場合、初期化する

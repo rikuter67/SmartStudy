@@ -12,7 +12,7 @@ prompt_template_questions = """
 学生の試験準備となる質問を作成します。
 重要な情報を失わないようにしてください。
 
-質問: 
+QUESTIONS: 
 """
 PROMPT_QUESTIONS = PromptTemplate(template=prompt_template_questions, input_variables=["text"])
 
@@ -26,7 +26,7 @@ refine_template_questions = ( """
 {text} 
 ------------
 
-新しいコンテキストを使用して、元の質問を日本語でで修正します。
+新しいコンテキストを使用して、元の質問を日本語で修正します。
 コンテキストが役に立たない場合は、元の質問を提供してください。
 質問:
 """
